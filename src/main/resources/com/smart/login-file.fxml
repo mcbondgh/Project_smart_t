@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="465.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smart.controllers.LoginController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404567" height="474.0" layoutX="-4.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="321.0" />
+      <ImageView fitHeight="249.0" fitWidth="271.0" layoutX="37.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/smart-t.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="36.0" layoutY="346.0" text="SMART TOLL BOOTH" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="27.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="161.0" layoutY="392.0" startX="-100.0" stroke="WHITE" />
+      <Label layoutX="424.0" layoutY="97.0" prefHeight="50.0" prefWidth="113.0" text="LOGIN" textFill="#404567">
+         <font>
+            <Font name="Corbel Bold" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="356.0" layoutY="195.0" prefHeight="34.0" prefWidth="250.0" />
+      <PasswordField fx:id="passwordField" layoutX="356.0" layoutY="270.0" prefHeight="34.0" prefWidth="250.0" />
+      <Button fx:id="loginButton" defaultButton="true" layoutX="395.0" layoutY="320.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #404567;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="494.0" layoutY="319.0" mnemonicParsing="false" onAction="#closeButtonClicked" prefHeight="34.0" prefWidth="85.0" style="-fx-background-color: #d2d2d2;" text="Close">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="360.0" layoutY="172.0" text="Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="243.0" text="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
