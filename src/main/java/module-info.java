@@ -7,8 +7,15 @@ module com.smart.smartt {
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
+    requires materialfx;
+    requires com.google.zxing;
+    requires com.google.zxing.javase;
+    requires java.desktop;
+
 
     opens com.smart to javafx.fxml;
+    opens com.smart.tableviewdata;
     exports com.smart;
     exports com.smart.controllers;
     exports com.smart.specialmethods;

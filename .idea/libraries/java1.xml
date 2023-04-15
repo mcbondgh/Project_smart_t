@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="java1">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../MaterialFX-11.13.5.zip!/MaterialFX-11.13.5/demo/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../MaterialFX-11.13.5.zip!/MaterialFX-11.13.5/demo/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/../../MaterialFX-11.13.5.zip!/MaterialFX-11.13.5/materialfx/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

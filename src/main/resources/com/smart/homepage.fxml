@@ -43,7 +43,7 @@
             </Label>
             <Label fx:id="currentUserLabel" layoutX="973.0" layoutY="24.0" prefHeight="20.0" prefWidth="154.0" text="Username" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
             <ImageView disable="true" fitHeight="30.0" fitWidth="34.0" layoutX="937.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
@@ -54,15 +54,7 @@
             <Separator layoutX="1149.0" layoutY="4.0" orientation="VERTICAL" prefHeight="48.0" prefWidth="0.0" />
          </children>
       </Pane>
-      <BorderPane fx:id="borderPaneContainer" layoutX="203.0" layoutY="63.0" prefHeight="596.0" prefWidth="1065.0" style="-fx-border-color: #ccc;">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.5438596606254578" green="0.5438596606254578" blue="0.5438596606254578" />
-               </color>
-            </DropShadow>
-         </effect>
-      </BorderPane>
+      <BorderPane fx:id="borderPaneContainer" layoutX="203.0" layoutY="63.0" prefHeight="596.0" prefWidth="1065.0" />
       <VBox layoutX="-4.0" layoutY="56.0" prefHeight="620.0" prefWidth="202.0" style="-fx-background-color: #404567;">
          <children>
             <Pane prefHeight="99.0" prefWidth="202.0">
@@ -98,7 +90,7 @@
             </Pane>
             <Pane prefHeight="59.0" prefWidth="202.0" style="-fx-background-color: #626ca1;">
                <children>
-                  <Button fx:id="vehicleClassificationButton" alignment="CENTER" layoutY="-2.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="Vehicle Classification" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="qrVerificationButton" alignment="CENTER" layoutY="-2.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="Accounting" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -110,7 +102,7 @@
             </Pane>
             <Pane prefHeight="59.0" prefWidth="202.0" style="-fx-background-color: #626ca1;">
                <children>
-                  <Button fx:id="qrVerificationButton" alignment="CENTER" layoutY="-2.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="QR Verificaion" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="accountsButton" alignment="CENTER" layoutY="-2.0" mnemonicParsing="false" onAction="#accountsButtonClicked" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="Toll &amp; Payments" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -122,19 +114,7 @@
             </Pane>
             <Pane prefHeight="59.0" prefWidth="202.0" style="-fx-background-color: #626ca1;">
                <children>
-                  <Button fx:id="accountsButton" alignment="CENTER" layoutY="-2.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="Accounts &amp; Payments" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-            </Pane>
-            <Pane prefHeight="59.0" prefWidth="202.0" style="-fx-background-color: #626ca1;">
-               <children>
-                  <Button fx:id="customerButton" alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="Customer &amp; Vehicles" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="customerRegistrationButton" alignment="CENTER" layoutY="1.0" mnemonicParsing="false" onAction="#customerRegistrationButtonClicked" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #626ca1;" text="Customer Registration" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -149,10 +129,9 @@
                   <MenuButton fx:id="settingsButton" alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: transparent;" text="Settings" textAlignment="CENTER" textFill="WHITE">
                     <items>
                       <MenuItem fx:id="manageUsersButton" mnemonicParsing="false" onAction="#manageUsersButtonClicked" style="-fx-font-size: 14; -fx-width: 202;" text="Manage User" />
-                      <MenuItem mnemonicParsing="false" style="-fx-font-size: 14; -fx-width: 202;" text="Manage Vehicle Classes" />
-                        <MenuItem mnemonicParsing="false" style="-fx-font-size: 14; -fx-width: 202;" text="Manage Customers" />
-                        <MenuItem mnemonicParsing="false" style="-fx-font-size: 14; -fx-width: 202;" text="Add Payment Methods" />
-                        <MenuItem mnemonicParsing="false" style="-fx-font-size: 14; -fx-width: 202;" text="Set Permission" />
+                      <MenuItem fx:id="vehicleClassesButton" mnemonicParsing="false" onAction="#vehicleClassesButtonClicked" style="-fx-font-size: 14; -fx-width: 202;" text="Manage Vehicle Classes" />
+                        <MenuItem mnemonicParsing="false" style="-fx-font-size: 14; -fx-width: 202;" text="Set Payment Methods" visible="false" />
+                        <MenuItem fx:id="RolesPermissionButton" mnemonicParsing="false" onAction="#RolesPermissionButtonClicked" style="-fx-font-size: 14; -fx-width: 202;" text="Set Permission &amp; Roles" />
                     </items>
                      <font>
                         <Font size="14.0" />

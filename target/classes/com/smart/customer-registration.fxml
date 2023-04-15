@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1072.0" style="-fx-background-color: #f5fbff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smart.controllers.CustomerRegistrationController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#b8d9ff" height="53.0" layoutX="13.0" layoutY="5.0" stroke="#00000005" strokeType="INSIDE" style="-fx-background-color: #d4d9ff;" width="1053.0" />
+      <Label layoutX="47.0" layoutY="10.0" text="CUSTOMER REGISTRATION" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="14.0" layoutY="65.0" prefHeight="511.0" prefWidth="1053.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab style="-fx-background-color: #f5fbff;" text="Register Customer">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="324.0">
+                     <children>
+                        <Pane layoutX="8.0" layoutY="18.0" onMouseMoved="#checkAllInputFields" prefHeight="445.0" prefWidth="1033.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.8771929740905762" green="0.8771929740905762" blue="0.8771929740905762" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="14.0" prefHeight="30.0" prefWidth="212.0" text="Customer Details" textFill="#8f8f8f">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="30.0" layoutY="336.0" text="Description">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="28.0" layoutY="54.0" text="Customer Full Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="customerNameField" layoutX="24.0" layoutY="77.0" prefHeight="32.0" prefWidth="331.0" promptText="Customer Full name" style="-fx-background-color: #eee; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutX="35.0" layoutY="46.0" prefHeight="2.0" prefWidth="194.0" />
+                              <Label layoutX="430.0" layoutY="136.0" text="Class">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="descriptionField" layoutX="28.0" layoutY="357.0" prefHeight="65.0" prefWidth="333.0" style="-fx-background-color: #eee; -fx-border-color: #ccc;" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextArea>
+                              <Button fx:id="saveCustomerButton" disable="true" layoutX="829.0" layoutY="409.0" mnemonicParsing="false" onAction="#saveCustomerButtonClicked" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #3356c9;" text="Save Category" textFill="WHITE" />
+                              <Button fx:id="clearCustomerButton" layoutX="937.0" layoutY="410.0" mnemonicParsing="false" onAction="#clearButtonClicked" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
+                              <Label layoutX="25.0" layoutY="126.0" text="Mobile Number">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mobileNumberField" layoutX="21.0" layoutY="149.0" onKeyReleased="#validateMobileNumberField" prefHeight="32.0" prefWidth="159.0" promptText="Customer Full name" style="-fx-background-color: #eee; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="194.0" layoutY="123.0" text="Digital Address">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="digitalAddressField" layoutX="190.0" layoutY="148.0" prefHeight="32.0" prefWidth="164.0" promptText="Customer Full name" style="-fx-background-color: #eee; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="27.0" layoutY="197.0" text="Email Address">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="idNumberField" layoutX="190.0" layoutY="289.0" prefHeight="32.0" prefWidth="161.0" promptText="Customer Full name" style="-fx-background-color: #eee; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="194.0" layoutY="267.0" text="Id Number">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="emailAddressField" layoutX="21.0" layoutY="220.0" prefHeight="32.0" prefWidth="329.0" promptText="Customer Full name" style="-fx-background-color: #eee; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="idTypeSelector" layoutX="27.0" layoutY="289.0" prefHeight="32.0" prefWidth="151.0" promptText="Select ID Type" style="-fx-background-color: #eee; -fx-font-size: 14;" />
+                              <Label layoutX="27.0" layoutY="266.0" text="Id Type">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="14.0" prefHeight="30.0" prefWidth="212.0" text="Vehicle Information" textFill="#8f8f8f">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="461.0" layoutY="46.0" prefHeight="2.0" prefWidth="194.0" />
+                              <Separator layoutX="396.0" layoutY="19.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="5.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="779.0" layoutY="14.0" prefHeight="30.0" prefWidth="212.0" text="Generate QR Code" textFill="#8f8f8f">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="790.0" layoutY="46.0" prefHeight="2.0" prefWidth="194.0" />
+                              <Separator layoutX="735.0" layoutY="19.0" orientation="VERTICAL" prefHeight="396.0" prefWidth="1.0" />
+                              <Label layoutX="429.0" layoutY="54.0" text="Vehicle Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="432.0" layoutY="270.0" text="Registration Number">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="registrationNumberField" layoutX="429.0" layoutY="293.0" prefHeight="32.0" prefWidth="254.0" promptText="Customer Full name" style="-fx-background-color: #eee; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="429.0" layoutY="204.0" text="Vehicle Weight">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="429.0" layoutY="350.0" text="TOLL RATE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tollRateLabel" alignment="CENTER" layoutX="423.0" layoutY="372.0" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #d4d9ff; -fx-background-radius: 10;" text="0.00" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="772.0" layoutY="63.0" prefHeight="230.0" prefWidth="230.0" style="-fx-border-color: #ddd;">
+                                 <children>
+                                    <ImageView fx:id="qrImageView" fitHeight="220.0" fitWidth="220.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" style="fx-backgound-color: #fff; -fx-border-color: #eee;" />
+                                 </children>
+                              </Pane>
+                              <Label fx:id="qrCodeName" alignment="CENTER" layoutX="774.0" layoutY="301.0" prefHeight="27.0" prefWidth="226.0" style="-fx-background-color: #eee;" />
+                              <Button fx:id="generateQrButton" disable="true" layoutX="850.0" layoutY="334.0" mnemonicParsing="false" onAction="#generateQrButtonClicked" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #ddd;" text="Generate" />
+                              <CheckBox fx:id="sendSMSCheckBox" layoutX="511.0" layoutY="350.0" mnemonicParsing="false" text="Send Customer Notification" />
+                              <MFXFilterComboBox fx:id="vehicleNameSelector" layoutX="428.0" layoutY="75.0" onAction="#vehicleNameSelected" prefHeight="39.0" prefWidth="260.0" promptText="Select Vehecle Name" scrollOnOpen="true" selectable="true" style="-fx-background-color: #eee;">
+                                 <font>
+                                    <Font name="Roboto" size="14.0" />
+                                 </font>
+                              </MFXFilterComboBox>
+                              <TextField fx:id="vehicleClassField" editable="false" layoutX="429.0" layoutY="158.0" prefHeight="32.0" prefWidth="254.0" promptText="Vehicle Class" style="-fx-background-color: #fff; -fx-border-color: #ff2222; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="vehicleWeightField" editable="false" layoutX="429.0" layoutY="225.0" prefHeight="32.0" prefWidth="254.0" promptText="VehicleWeight" style="-fx-background-color: #fff; -fx-border-color: #ff2222; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #f5fbff;" text="View Customers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="customerRegistrationTable" fixedCellSize="35.0" layoutX="14.0" layoutY="63.0" prefHeight="405.0" prefWidth="1029.0" style="-fx-font-size: 14; -fx-font-family: poppips;" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="customerNameColumn" prefWidth="233.3333225250244" sortType="DESCENDING" text="CUSTOMER NAME" />
+                              <TableColumn fx:id="mobileNumberColumn" prefWidth="155.3333740234375" sortType="DESCENDING" text="MOBILE NUMBER" />
+                              <TableColumn fx:id="digitalAddressColumn" prefWidth="155.3333740234375" sortType="DESCENDING" text="DIGITAL ADDRESS" />
+                              <TableColumn fx:id="idTypeColumn" prefWidth="113.33331298828125" sortType="DESCENDING" text="ID TYPE" />
+                              <TableColumn fx:id="idNumbreColumn" prefWidth="135.33331298828125" sortType="DESCENDING" text="ID NUMBER" />
+                              <TableColumn fx:id="emailAddressColumn" prefWidth="153.99993896484375" sortType="DESCENDING" text="EMAIL ADDRESS" />
+                              <TableColumn fx:id="vehicleNameColumn" prefWidth="116.66668701171875" sortType="DESCENDING" text="VEHICLE NAME" />
+                              <TableColumn fx:id="vehicleClassColumn" prefWidth="135.33331298828125" sortType="DESCENDING" text="VEHICLE CLASS" />
+                              <TableColumn fx:id="registrationColumn" prefWidth="135.33331298828125" sortType="DESCENDING" text="VEHICLE WEIGHT " />
+                              <TableColumn fx:id="vehicleWeightColumn" prefWidth="135.33331298828125" sortType="DESCENDING" text="REGISTRATION NUMBER" />
+                              <TableColumn fx:id="dateAddreColumn" prefWidth="135.33331298828125" sortType="DESCENDING" text="DATE ADDED" />
+                              <TableColumn fx:id="valid_date_Column" prefWidth="135.33331298828125" sortType="DESCENDING" text="VALID UNTIL" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="searchCustomerField" layoutX="14.0" layoutY="23.0" onKeyTyped="#filterRegistrationTable" prefHeight="35.0" prefWidth="268.0" promptText="Quick Search Customer">
+                           <font>
+                              <Font name="Poppins Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="15.0" layoutY="6.0" text="Search by customer name, car type or category " textFill="#a30000">
+                           <font>
+                              <Font name="System Italic" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="20.0" prefHeight="35.0" prefWidth="170.0" text="Total Registered Customers" textFill="#222222">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalRegistrationLabel" alignment="CENTER" layoutX="535.0" layoutY="20.0" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #d4d9ff;" text="0" textFill="#2d2a2a">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="671.0" layoutY="20.0" prefHeight="35.0" prefWidth="128.0" text="Today's Registration" textFill="#2b2b2b">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="todayRegistrationLabel" alignment="CENTER" layoutX="801.0" layoutY="19.0" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #d4d9ff;" text="0" textFill="#242020">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

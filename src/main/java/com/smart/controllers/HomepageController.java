@@ -1,6 +1,7 @@
 package com.smart.controllers;
 
 import com.smart.AppStarter;
+import com.smart.alerts.UserAlerts;
 import com.smart.specialmethods.SpecialMethods;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
@@ -17,9 +19,12 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.IllegalFormatCodePointException;
 import java.util.ResourceBundle;
 
 public class HomepageController implements Initializable {
+
+    UserAlerts alerts;
 
 //    FXML NODE FILE EJECTION
     @FXML private BorderPane borderPaneContainer;
@@ -29,12 +34,12 @@ public class HomepageController implements Initializable {
         private Button accountsButton;
         @FXML private Label currentUserLabel;
         @FXML
-        private Button customerButton;
+        private Button customerRegistrationButton;
         @FXML private Button homeButton;
         @FXML private Button qrVerificationButton;
         @FXML private MenuButton settingsButton;
         @FXML private Button vehicleClassificationButton;
-        @FXML private MenuButton manageUsersButton;
+        @FXML private MenuItem manageUsersButton,RolesPermissionButton, vehicleClassesButton;
 
 
         public static String activeUser;
@@ -61,8 +66,12 @@ public class HomepageController implements Initializable {
 
 //    ACTION EVENT METHODS IMPLEMENTATION
     @FXML void logoutButtonClicked(ActionEvent event) throws IOException {
-        logoutButton.getScene().getWindow().hide();
-        AppStarter.LoginStage();
+        alerts = new UserAlerts("LOG OUT", "ARE YOU SURE YOU WANT TO LOG OUT?");
+        if (alerts.confirmation()) {
+            logoutButton.getScene().getWindow().hide();
+            AppStarter.LoginStage();
+        }
+
     }
 
     @FXML void homeButtonClicked(ActionEvent event) throws IOException {
@@ -73,6 +82,19 @@ public class HomepageController implements Initializable {
         SpecialMethods.FlipView("add-users.fxml", borderPaneContainer);
     }
 
+    @FXML void RolesPermissionButtonClicked() throws IOException {
+        SpecialMethods.FlipView("permission&roles.fxml", borderPaneContainer);
+    }
+
+    @FXML void vehicleClassesButtonClicked() throws IOException {
+        SpecialMethods.FlipView("vehicle-classifications.fxml", borderPaneContainer);
+    }
+    @FXML void customerRegistrationButtonClicked() throws IOException {
+        SpecialMethods.FlipView("customer-registration.fxml", borderPaneContainer);
+    }
+    @FXML void accountsButtonClicked() throws IOException {
+        SpecialMethods.FlipView("toll&payments.fxml", borderPaneContainer);
+    }
 
 
 }//end of class

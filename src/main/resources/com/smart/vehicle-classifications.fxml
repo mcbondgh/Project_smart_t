@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1072.0" style="-fx-background-color: #f5fbff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smart.controllers.ClassificationController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#b8d9ff" height="53.0" layoutX="13.0" layoutY="5.0" stroke="#00000005" strokeType="INSIDE" style="-fx-background-color: #d4d9ff;" width="1053.0" />
+      <Label layoutX="47.0" layoutY="10.0" text="MANAGE VEHICLE CLASSIFICAIONS" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="14.0" layoutY="65.0" prefHeight="511.0" prefWidth="1053.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #f5fbff;" text="Vehicle Classes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="324.0">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="14.0" onMouseMoved="#checkInputFields" prefHeight="445.0" prefWidth="282.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.8771929740905762" green="0.8771929740905762" blue="0.8771929740905762" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="4.0" prefHeight="30.0" prefWidth="212.0" text="Add Vehicle Category" textFill="#8f8f8f">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="120.0" text="Categoy Description">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="48.0" text="Category Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="categoryNameField" layoutX="8.0" layoutY="71.0" prefHeight="32.0" prefWidth="173.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutX="9.0" layoutY="36.0" prefHeight="4.0" prefWidth="266.0" />
+                              <ComboBox fx:id="categoryClassSelector" layoutX="195.0" layoutY="71.0" prefHeight="30.0" prefWidth="80.0" promptText="eg A" style="-fx-background-color: #eee; -fx-font-size: 14;" />
+                              <Label layoutX="198.0" layoutY="50.0" text="Class">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="descriptionField" layoutX="12.0" layoutY="141.0" prefHeight="105.0" prefWidth="262.0" style="-fx-background-color: #ddd;" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextArea>
+                              <Button fx:id="saveCategoryButton" disable="true" layoutX="35.0" layoutY="265.0" mnemonicParsing="false" onAction="#saveCategoryButtonClicked" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #3356c9;" text="Save Category" textFill="WHITE" />
+                              <Button fx:id="clearCategoryButton" layoutX="146.0" layoutY="265.0" mnemonicParsing="false" onAction="#clearCategoryButtonClicked" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
+                           </children>
+                        </Pane>
+                        <TableView fx:id="categoriesTableView" layoutX="319.0" layoutY="12.0" onMouseClicked="#categoriesTableViewClicked" prefHeight="442.0" prefWidth="703.0" style="-fx-font-size: 14;" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="categoryIdColumn" prefWidth="72.0" text="CAT ID" />
+                            <TableColumn fx:id="categoryNameColumn" prefWidth="215.33334350585938" text="CATEGORY NAME" />
+                              <TableColumn fx:id="classColumn" prefWidth="71.99993896484375" text="CLASS" />
+                              <TableColumn fx:id="descriptionColumn" prefWidth="220.0" text="DESCRIPTION" />
+                              <TableColumn fx:id="dateAddedColumn" prefWidth="122.6666259765625" text="DATE ADDED" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #f5fbff;" text="Add Vehicle">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="21.0" layoutY="378.0" onMouseMoved="#checkAllWeightFields" prefHeight="89.0" prefWidth="1011.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.8771929740905762" green="0.8771929740905762" blue="0.8771929740905762" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <TextField fx:id="vehicleNameField" layoutX="18.0" layoutY="45.0" prefHeight="32.0" prefWidth="232.0" promptText="eg BMW" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="vehicleClassSelector" layoutX="258.0" layoutY="47.0" prefHeight="30.0" prefWidth="69.0" promptText="eg A" style="-fx-background-color: #eee;" />
+                              <ComboBox fx:id="weightSelector" layoutX="338.0" layoutY="49.0" prefHeight="30.0" prefWidth="141.0" promptText="eg light" style="-fx-background-color: #eee;" />
+                              <Label layoutX="260.0" layoutY="26.0" text="Class">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="minWeightField" alignment="CENTER" layoutX="491.0" layoutY="44.0" onKeyReleased="#validateMinWeightValue" prefHeight="33.0" prefWidth="90.0" promptText="eg 1kg" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="maxWeightField" alignment="CENTER" layoutX="595.0" layoutY="44.0" onKeyReleased="#validateMaxWeightValue" prefHeight="33.0" prefWidth="90.0" promptText="2000kkg" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="491.0" layoutY="21.0" text="Min Weight">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="595.0" layoutY="21.0" text="Max Weight">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tollRateField" alignment="CENTER" layoutX="726.0" layoutY="44.0" onKeyReleased="#validateTollRateValue" prefHeight="33.0" prefWidth="61.0" promptText="Ghc1" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="728.0" layoutY="24.0" text="Toll Rate">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="19.0" layoutY="26.0" text="Vehicle Type/Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="339.0" layoutY="28.0" text="Weight Category">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="saveVehicleButton" disable="true" layoutX="843.0" layoutY="46.0" mnemonicParsing="false" onAction="#saveVehicleButtonClicked" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #3356c9;" text="Save" textFill="WHITE" />
+                              <Button fx:id="clearVehicleButton" layoutX="917.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
+                              <Label layoutX="696.0" layoutY="50.0" text="Ghc">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <TableView fx:id="vehicleTableView" layoutX="36.0" layoutY="21.0" prefHeight="344.0" prefWidth="971.0" style="-fx-font-size: 14; -fx-font-family: poppips;">
+                          <columns>
+                            <TableColumn fx:id="idTypeColumn" prefWidth="75.0" sortType="DESCENDING" text="Type Id" />
+                            <TableColumn fx:id="vehicleTypeColumn" prefWidth="189.33334350585938" text="VEHICLE TYPE " />
+                              <TableColumn fx:id="vehicleClassColumn" prefWidth="78.0" text="CLASS" />
+                              <TableColumn fx:id="weightCategoryColumn" prefWidth="150.66668701171875" text="WEIGHT CATEGORY" />
+                              <TableColumn fx:id="minWeightColumn" prefWidth="110.0" text="MIN WEIGHT" />
+                              <TableColumn fx:id="maxWeighColumn" prefWidth="108.0" text="MAX WEIGHT" />
+                              <TableColumn fx:id="tollRateColumn" prefWidth="100.0" text="TOLL RATE" />
+                              <TableColumn fx:id="vehicleAddedDateColumn" prefWidth="156.0" text="DATE ADDED" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

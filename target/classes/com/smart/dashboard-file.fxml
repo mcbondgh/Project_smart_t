@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1072.0" style="-fx-background-color: #f5fbff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="62.0" layoutX="13.0" layoutY="14.0" stroke="#00000005" strokeType="INSIDE" width="289.0" />
+      <Label layoutX="47.0" layoutY="22.0" text="DASHBOARD" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="88.0" layoutY="106.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="104.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/blue-car-16322099.jpg" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect></ImageView>
+      <Label layoutX="140.0" layoutY="215.0" text="TOTAL CARS" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalVehiclesLabel" alignment="CENTER" layoutX="137.0" layoutY="236.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="314.0" layoutY="105.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="364.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/registered.png" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="339.0" layoutY="215.0" text="RENEWED TOLL CARS" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="renewedTollLabel" alignment="CENTER" layoutX="371.0" layoutY="236.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="546.0" layoutY="105.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="598.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/download%20(1).png" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="576.0" layoutY="215.0" text="PENDING RENEWAL" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pendingRenewalLabel" alignment="CENTER" layoutX="599.0" layoutY="236.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="787.0" layoutY="105.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="805.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/9_63_800.jpeg" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="826.0" layoutY="215.0" text="EXPIRED TOKENS" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="expiredTokenLabel" alignment="CENTER" layoutX="847.0" layoutY="236.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="88.0" layoutY="328.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="139.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/download.png" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="133.0" layoutY="444.0" text="VALID TOKENS" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="validTokenLabel" alignment="CENTER" layoutX="137.0" layoutY="462.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="313.0" layoutY="328.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="359.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/set-cartoon-cute-cars-vehicles-vector-illustration-57745829.jpg" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="351.0" layoutY="444.0" text="VEHICLE CLASSES" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vehicleClassesLabel" alignment="CENTER" layoutX="370.0" layoutY="462.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="548.0" layoutY="328.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="580.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/istockphoto-1359109745-612x612.jpg" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="557.0" layoutY="444.0" text="REGISTERED CUSTOMERS" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="registeredCustomersLabel" alignment="CENTER" layoutX="606.0" layoutY="462.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="787.0" layoutY="328.0" stroke="TRANSPARENT" strokeType="INSIDE" width="193.0">
+         <effect>
+            <DropShadow spread="0.06">
+               <color>
+                  <Color red="0.859649121761322" green="0.859649121761322" blue="0.859649121761322" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="83.0" fitWidth="157.0" layoutX="833.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/q.png" />
+         </image>
+         <effect>
+            <DropShadow spread="0.36">
+               <color>
+                  <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.8947368264198303" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="833.0" layoutY="444.0" text="AVERAGE TOLL" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="averageTollLabel" alignment="CENTER" layoutX="844.0" layoutY="462.0" prefHeight="30.0" prefWidth="78.0" text="100" textAlignment="CENTER" textFill="#253ac0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

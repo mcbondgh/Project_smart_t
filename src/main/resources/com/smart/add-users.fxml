@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1072.0" style="-fx-background-color: #f5fbff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1072.0" style="-fx-background-color: #f5fbff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smart.controllers.ManageUsers">
    <children>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d6dcff" height="53.0" layoutX="13.0" layoutY="5.0" stroke="#00000005" strokeType="INSIDE" style="-fx-background-color: #d4d9ff;" width="1046.0" />
       <Label layoutX="47.0" layoutY="10.0" text="MANAGE USERS" textFill="#404567">
@@ -23,7 +23,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="24.0" layoutY="69.0" prefHeight="282.0" prefWidth="411.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+      <Pane layoutX="24.0" layoutY="69.0" onMouseMoved="#checkEmployeeInputFields" prefHeight="282.0" prefWidth="411.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
          <effect>
             <DropShadow>
                <color>
@@ -42,7 +42,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="8.0" layoutY="75.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+            <TextField fx:id="firstnameField" layoutX="8.0" layoutY="75.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
                <font>
                   <Font size="14.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="214.0" layoutY="75.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+            <TextField fx:id="lastnameField" layoutX="214.0" layoutY="75.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
                <font>
                   <Font size="14.0" />
                </font>
@@ -62,7 +62,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="8.0" layoutY="139.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+            <TextField fx:id="mobileNumberField" layoutX="8.0" layoutY="139.0" onKeyReleased="#checkMobileNumber" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
                <font>
                   <Font size="14.0" />
                </font>
@@ -72,29 +72,29 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="214.0" layoutY="139.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+            <TextField fx:id="emailField" layoutX="214.0" layoutY="139.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
             <Separator layoutX="16.0" layoutY="41.0" prefHeight="3.0" prefWidth="387.0" />
-            <ComboBox layoutX="8.0" layoutY="201.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #eee;" />
+            <ComboBox fx:id="genderSelector" layoutX="8.0" layoutY="201.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #eee; -fx-font-size: 14;" />
             <Label layoutX="10.0" layoutY="179.0" text="Gender">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <ComboBox layoutX="214.0" layoutY="201.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #eee;" />
+            <ComboBox fx:id="departmentSelector" layoutX="214.0" layoutY="201.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #eee; -fx-font-size: 14;" />
             <Label layoutX="215.0" layoutY="178.0" text="Department">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="217.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #3356c9;" text="Save Employee" textFill="WHITE" />
-            <Button layoutX="328.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
+            <Button fx:id="saveEmployeeButton" disable="true" layoutX="217.0" layoutY="244.0" mnemonicParsing="false" onAction="#saveEmployeeClicked" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #3356c9;" text="Save Employee" textFill="WHITE" />
+            <Button fx:id="clearEmployeeButton" layoutX="328.0" layoutY="244.0" mnemonicParsing="false" onAction="#clearEmployeeClicked" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
          </children>
       </Pane>
-      <Pane layoutX="24.0" layoutY="356.0" prefHeight="216.0" prefWidth="411.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+      <Pane layoutX="24.0" layoutY="356.0" onMouseMoved="#checkUserFields" prefHeight="216.0" prefWidth="411.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
          <effect>
             <DropShadow>
                <color>
@@ -118,8 +118,8 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ComboBox layoutX="12.0" layoutY="70.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #eee;" />
-            <TextField layoutX="214.0" layoutY="69.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;">
+            <ComboBox fx:id="employeeSelector" layoutX="12.0" layoutY="70.0" onAction="#employeeSelected" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #eee;" />
+            <TextField fx:id="usernameField" editable="false" layoutX="214.0" layoutY="69.0" prefHeight="30.0" prefWidth="187.0" style="-fx-border-color: #ff1111; -fx-border-radius: 5; -fx-background-color: #fff;">
                <font>
                   <Font size="14.0" />
                </font>
@@ -135,21 +135,36 @@
                </font>
             </Label>
             <Separator layoutX="9.0" layoutY="36.0" prefHeight="3.0" prefWidth="387.0" />
-            <PasswordField layoutX="14.0" layoutY="130.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;" />
-            <PasswordField layoutX="214.0" layoutY="130.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;" />
-            <Button layoutX="215.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #3356c9;" text="Save Employee" textFill="WHITE" />
-            <Button layoutX="326.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
+            <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="130.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;" />
+            <PasswordField fx:id="confirmPasswordField" layoutX="214.0" layoutY="130.0" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #f8f9ff; -fx-border-color: #eee;" />
+            <Button fx:id="saveUserButton" disable="true" layoutX="215.0" layoutY="180.0" mnemonicParsing="false" onAction="#saveUserClicked" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #3356c9;" text="Save User" textFill="WHITE" />
+            <Button fx:id="clearUserButton" layoutX="326.0" layoutY="180.0" mnemonicParsing="false" onAction="#clearUserClicked" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #eee;" text="Clear" />
+            <ComboBox fx:id="userRoleSelector" layoutX="14.0" layoutY="176.0" prefHeight="30.0" prefWidth="187.0" promptText="Select Role Type" style="-fx-background-color: #eee; -fx-font-size: 14;" />
          </children>
       </Pane>
-      <TableView editable="true" layoutX="446.0" layoutY="73.0" prefHeight="503.0" prefWidth="614.0" style="-fx-background-color: #FFF; -fx-font-size: 14; -fx-font-family: poppins; -fx-alignment: center;" tableMenuButtonVisible="true">
+      <TableView fx:id="employeesTableView" editable="true" layoutX="446.0" layoutY="73.0" onMouseClicked="#employeeTableClicked" prefHeight="282.0" prefWidth="614.0" style="-fx-background-color: #FFF; -fx-font-size: 14; -fx-font-family: poppins; -fx-alignment: center;" tableMenuButtonVisible="true">
         <columns>
-          <TableColumn prefWidth="168.00006103515625" text="FULL NAME" />
-          <TableColumn minWidth="0.0" prefWidth="156.0" text="MOBILE NUMBER" />
-            <TableColumn minWidth="0.0" prefWidth="156.0" text="EMAIL" />
-            <TableColumn minWidth="0.0" prefWidth="156.0" text="GENDER" />
-            <TableColumn minWidth="0.0" prefWidth="156.0" text="DEPARTMENT" />
-            <TableColumn minWidth="0.0" prefWidth="156.0" text="DATE JOINED" />
+          <TableColumn fx:id="fullnameColumn" prefWidth="191.33328247070312" style="-fx-base-text-fill: orange;" text="FULL NAME" />
+          <TableColumn fx:id="numberColumn" minWidth="0.0" prefWidth="133.3333740234375" text="MOBILE NUMBER" />
+            <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="156.0" text="EMAIL" />
+            <TableColumn fx:id="genderColumn" minWidth="0.0" prefWidth="156.0" text="GENDER" />
+            <TableColumn fx:id="departmentColumn" minWidth="0.0" prefWidth="156.0" text="DEPARTMENT" />
+            <TableColumn fx:id="dateJoinedColumn" minWidth="0.0" prefWidth="156.0" text="DATE JOINED" />
         </columns>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.7719298005104065" green="0.7719298005104065" blue="0.7719298005104065" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <TableView fx:id="usersTableView" editable="true" layoutX="446.0" layoutY="365.0" prefHeight="204.0" prefWidth="614.0" style="-fx-background-color: #FFF; -fx-font-size: 14; -fx-font-family: poppins; -fx-alignment: center;" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="usernameColumn" prefWidth="260.6665954589844" style="-fx-base-text-fill: orange;" text="USERNAME" />
+            <TableColumn fx:id="rolesColumn" minWidth="0.0" prefWidth="166.66668701171875" text="USER ROLE" />
+            <TableColumn fx:id="dateAddedColumn" minWidth="0.0" prefWidth="154.6666259765625" text="DATE ADDED" />
+         </columns>
          <effect>
             <DropShadow>
                <color>

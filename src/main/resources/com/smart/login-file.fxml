@@ -11,28 +11,30 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="465.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smart.controllers.LoginController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404567" height="474.0" layoutX="-4.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="321.0" />
-      <ImageView fitHeight="249.0" fitWidth="271.0" layoutX="37.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404567" height="474.0" layoutX="-4.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="301.0" />
+      <ImageView fitHeight="249.0" fitWidth="271.0" layoutX="27.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/smart-t.png" />
          </image>
       </ImageView>
-      <Label layoutX="36.0" layoutY="346.0" text="SMART TOLL BOOTH" textFill="WHITE">
+      <Label layoutX="26.0" layoutY="346.0" text="SMART TOLL BOOTH" textFill="WHITE">
          <font>
             <Font name="Corbel Bold" size="27.0" />
          </font>
       </Label>
-      <Line endX="100.0" layoutX="161.0" layoutY="392.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="151.0" layoutY="392.0" startX="-100.0" stroke="WHITE" />
       <Label layoutX="424.0" layoutY="97.0" prefHeight="50.0" prefWidth="113.0" text="LOGIN" textFill="#404567">
          <font>
             <Font name="Corbel Bold" size="29.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameField" layoutX="356.0" layoutY="195.0" prefHeight="34.0" prefWidth="250.0" />
-      <PasswordField fx:id="passwordField" layoutX="356.0" layoutY="270.0" prefHeight="34.0" prefWidth="250.0" />
+      <TextField fx:id="usernameField" layoutX="356.0" layoutY="195.0" prefHeight="34.0" prefWidth="250.0" promptText="eg Admin">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font></TextField>
+      <PasswordField fx:id="passwordField" layoutX="356.0" layoutY="270.0" prefHeight="34.0" prefWidth="250.0" promptText="password" />
       <Button fx:id="loginButton" defaultButton="true" layoutX="395.0" layoutY="320.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #404567;" text="Login" textFill="WHITE">
          <font>
             <Font size="15.0" />
@@ -53,5 +55,11 @@
             <Font size="14.0" />
          </font>
       </Label>
+      <Label fx:id="flagLabel" alignment="CENTER" layoutX="304.0" layoutY="374.0" prefHeight="32.0" prefWidth="325.0" style="-fx-background-color: #ffc4c4;" text="Invalid Username or password. Not a recorgnized account" textFill="#770000" visible="false">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="441.0" text="Powered By Mc's Republic | (c) 2023" textFill="#7d7d7d" />
    </children>
 </AnchorPane>

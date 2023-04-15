@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1072.0" style="-fx-background-color: #f5fbff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smart.controllers.RolesPermissionController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#b8d9ff" height="53.0" layoutX="13.0" layoutY="5.0" stroke="#00000005" strokeType="INSIDE" style="-fx-background-color: #d4d9ff;" width="1046.0" />
+      <Label layoutX="47.0" layoutY="10.0" text="SET PERMISSION &amp; ROLES" textFill="#404567">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="13.0" layoutY="74.0" prefHeight="491.0" prefWidth="358.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8771929740905762" green="0.8771929740905762" blue="0.8771929740905762" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="101.0" layoutY="3.0" prefHeight="30.0" prefWidth="161.0" text="Add User Roles" textFill="#8f8f8f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="12.0" layoutY="36.0" prefHeight="3.0" prefWidth="333.0" />
+            <TableView fx:id="rolesTableView" fixedCellSize="40.0" layoutX="23.0" layoutY="49.0" onMouseClicked="#rolesTableDoubleClicked" prefHeight="323.0" prefWidth="304.0" style="-fx-font-size: 16;">
+              <columns>
+                <TableColumn fx:id="roleIdColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="ROLE ID " />
+                <TableColumn fx:id="roleNameColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="ROLE NAME" />
+              </columns>
+            </TableView>
+            <TextField fx:id="roleTextField" layoutX="25.0" layoutY="389.0" onKeyReleased="#inputFieldOnTyped" prefHeight="37.0" prefWidth="210.0" promptText="eg Sys Admin" style="-fx-background-color: #eee;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button fx:id="saveRoleButton" defaultButton="true" disable="true" layoutX="246.0" layoutY="393.0" mnemonicParsing="false" onAction="#saveRoleButtonClicked" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: #4474aa;" text="Save Role" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="391.0" layoutY="74.0" prefHeight="491.0" prefWidth="668.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8771929740905762" green="0.8771929740905762" blue="0.8771929740905762" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="5.0" prefHeight="30.0" prefWidth="200.0" text="Set User Permission" textFill="#8f8f8f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="13.0" layoutY="50.0" prefHeight="3.0" prefWidth="646.0" />
+            <ComboBox fx:id="userRoleSelector" layoutX="450.0" layoutY="7.0" onMouseClicked="#userRoleSelectorClicked" prefHeight="37.0" prefWidth="189.0" promptText="Select Role" style="-fx-background-color: #eee; -fx-font-size: 16; -fx-font-family: roboto;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
